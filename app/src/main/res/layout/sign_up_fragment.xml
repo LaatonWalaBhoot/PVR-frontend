@@ -160,7 +160,8 @@
                 android:layout_weight="0.85"
                 android:hint="Select City"
                 android:layout_height="40dp"
-                app:hideArrow="false"/>
+                app:hideArrow="false"
+                app:arrowTint="@android:color/black"/>
 
 
     </LinearLayout>
