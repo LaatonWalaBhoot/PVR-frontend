@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+            android:id="@+id/username_layout"
+            android:layout_above="@id/email_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="40dp"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginEnd="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:src="@drawable/username"
+                android:padding="10dp"
+                android:layout_width="0dp"
+                android:layout_weight="0.15"
+                android:layout_height="40dp"/>
+
+        <EditText android:layout_width="0dp"
+                  android:id="@+id/username"
+                  android:hint="Username"
+                  android:singleLine="true"
+                  android:textColor="@android:color/black"
+                  android:textColorHint="@android:color/darker_gray"
+                  android:maxLength="15"
+                  android:layout_weight="0.85"
+                  android:layout_height="40dp"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:id="@+id/email_layout"
+            android:layout_above="@id/password_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginEnd="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:src="@drawable/email_logo"
+                android:padding="10dp"
+                android:layout_width="0dp"
+                android:layout_weight="0.15"
+                android:layout_height="40dp"/>
+
+        <EditText android:layout_width="0dp"
+                  android:id="@+id/email"
+                  android:hint="Email Address"
+                  android:singleLine="true"
+                  android:textColor="@android:color/black"
+                  android:textColorHint="@android:color/darker_gray"
+                  android:maxLength="45"
+                  android:layout_weight="0.85"
+                  android:layout_height="40dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/password_layout"
+            android:layout_above="@id/confirm_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="40dp"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginEnd="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:src="@drawable/password_logo"
+                android:padding="10dp"
+                android:layout_width="0dp"
+                android:layout_weight="0.15"
+                android:layout_height="40dp"/>
+
+        <EditText android:layout_width="0dp"
+                  android:id="@+id/password"
+                  android:hint="Password"
+                  android:singleLine="true"
+                  android:inputType="textPassword"
+                  android:textColor="@android:color/black"
+                  android:textColorHint="@android:color/darker_gray"
+                  android:maxLength="15"
+                  android:layout_weight="0.85"
+                  android:layout_height="40dp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/confirm_layout"
+            android:layout_above="@id/city_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="40dp"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginEnd="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:src="@drawable/confirm"
+                android:padding="10dp"
+                android:layout_width="0dp"
+                android:layout_weight="0.15"
+                android:layout_height="40dp"/>
+
+        <EditText android:layout_width="0dp"
+                  android:id="@+id/confirm"
+                  android:hint="Confirm Password"
+                  android:singleLine="true"
+                  android:inputType="textPassword"
+                  android:textColor="@android:color/black"
+                  android:textColorHint="@android:color/darker_gray"
+                  android:maxLength="15"
+                  android:layout_weight="0.85"
+                  android:layout_height="40dp"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:id="@+id/city_layout"
+            android:layout_above="@id/submit"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="40dp"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginEnd="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:src="@drawable/city"
+                android:padding="10dp"
+                android:layout_width="0dp"
+                android:layout_weight="0.15"
+                android:layout_height="40dp"/>
+
+        <org.angmarch.views.NiceSpinner
+                android:id="@+id/nice_spinner"
+                android:layout_width="0dp"
+                android:layout_weight="0.85"
+                android:hint="Select City"
+                android:layout_height="40dp"
+                app:hideArrow="false"/>
+
+
+    </LinearLayout>
+
+    <FrameLayout
+            android:id="@+id/progress_layout"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <ProgressBar
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+
+    </FrameLayout>
+
+    <Button
+            android:id="@+id/submit"
+            android:text="SIGNUP"
+            android:layout_above="@id/login"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+    </Button>
+
+    <TextView
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/message"
+            android:textSize="12sp"
+            android:textColor="@color/colorAccent"
+            android:text = "@string/login"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"/>
+
+
+    <TextView
+            android:id="@+id/message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="By registering I accept the terms of Service and Privacy Policy"
+            android:gravity="center"
+            android:layout_margin="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

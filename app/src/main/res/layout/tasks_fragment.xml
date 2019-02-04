@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:weightSum="3"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+            android:id="@+id/createUser"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/colorAccent"
+            app:cardCornerRadius="10dp">
+
+        <TextView
+                android:layout_gravity="center"
+                android:textSize="15sp"
+                android:textColor="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CREATE USER"/>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+            android:id="@+id/sendEmailToUser"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardCornerRadius="10dp">
+
+        <TextView
+                android:layout_gravity="center"
+                android:textSize="15sp"
+                android:textColor="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SEND EMAIL TO USER"/>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+            android:id="@+id/sendEmailForMovie"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/colorPrimaryDark"
+            app:cardCornerRadius="10dp">
+
+        <TextView
+                android:layout_gravity="center"
+                android:textSize="15sp"
+                android:textColor="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SEND EMAIL FOR MOVIE"/>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
