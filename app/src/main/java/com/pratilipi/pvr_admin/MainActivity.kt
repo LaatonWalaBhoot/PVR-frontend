@@ -3,6 +3,9 @@ package com.pratilipi.pvr_admin
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.text.TextUtils
+import android.util.Log
+import com.pratilipi.pvr_admin.data.managers.AdminManager
 import com.pratilipi.pvr_admin.ui.main.createUser.CreateUserFragment
 import com.pratilipi.pvr_admin.ui.main.email.EmailFragment
 import com.pratilipi.pvr_admin.ui.main.email.movie.MovieEmailFragment
@@ -56,8 +59,13 @@ class MainActivity : AppCompatActivity(), MainNavigator {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_activity)
+        AdminManager.getInstance().initPreferences(applicationContext)
         if (savedInstanceState == null) {
-            initLoginFragment()
+            if(AdminManager.getInstance().getUser() == null) {
+                initLoginFragment()
+            } else {
+                initTasksFragment()
+            }
         }
     }
 

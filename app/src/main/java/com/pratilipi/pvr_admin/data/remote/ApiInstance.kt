@@ -42,7 +42,7 @@ class ApiInstance() {
             .addInterceptor(loggingInterceptor)
             .build()
         apiService = Retrofit.Builder()
-            .baseUrl("http://pvr-admin.herokuapp.com/admin/")
+            .baseUrl("https://pvr-admin.herokuapp.com/admin/")
             .addConverterFactory(GsonConverterFactory.create(gson))
             .client(okHttpClient)
             .build().create(ApiService::class.java)

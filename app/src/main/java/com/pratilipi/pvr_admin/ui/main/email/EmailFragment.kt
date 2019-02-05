@@ -46,7 +46,7 @@ class EmailFragment: Fragment(), ApiInstance.OnSendEmailMovieListener, ApiInstan
                 val emailRequest = EmailRequest()
                 emailRequest.subject = subject.text.toString()
                 emailRequest.text = email.text.toString()
-                emailRequest.from = AdminManager.getInstance().getUser().email
+                emailRequest.from = AdminManager.getInstance().getUser()!!.email
                 if(TextUtils.isEmpty(movie)) {
                     emailRequest.to = user
                     ApiInstance.getInstance().sendEmailForUser(emailRequest, this)
